@@ -34,7 +34,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   line-height: 1.8rem;
+  z-index: 1;
 }
 #showcase::after {
   position: absolute;
@@ -50,7 +52,7 @@ body {
   font-size: 3rem;
 }
 #showcase p {
-  width: 30%;
+  /* width: 30%; */
   font-size: 1.2rem;
   margin-top: 40px;
 }
@@ -61,13 +63,13 @@ body {
   display: inline-block;
   text-decoration: none;
   font-size: 1.5rem;
-  color: var(--btn-color);
-  background-color: var(--text-color);
-  margin-top: 20px;
-  padding: 8px 22px;
-  transition: 1s ease;
-}
-#showcase a:hover {
   color: var(--text-color);
   background-color: var(--on-hover-bg-color);
+  margin-top: 20px;
+  padding: 8px 22px;
+  transition: 0.5s ease;
+}
+#showcase a:hover {
+  color: var(--btn-color);
+  background-color: var(--bg-btn-color);
 }
