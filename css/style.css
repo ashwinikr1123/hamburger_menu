@@ -9,13 +9,15 @@ body {
 
 /* color variables*/
 :root {
-  --bg-color: #053b504d;
+  --bg-color: #053b5010;
   --text-color: #ffffff;
   --btn-color: #ce5a67;
   --bg-btn-color: #f3eeea;
   --mid-text-color: #e5fd05;
   --on-hover-color: #fd0505;
   --on-hover-bg-color: #053b50;
+  /* --bg-opac-color: #031a23b0; */
+  --bg-opac-color: #6a64645c;
 }
 /* showcase styling */
 
@@ -43,6 +45,8 @@ body {
   left: 0;
   content: '';
   background: url('../image/image.jpg') no-repeat center center/cover;
+  /* background: url('https://images.unsplash.com/photo-1519046798162-b7144ecf8f38?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+    no-repeat center center/cover;*/
   height: 100%;
   width: 100%;
   z-index: -1;

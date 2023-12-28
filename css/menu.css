@@ -56,6 +56,7 @@
 }
 
 /* rotating and making of X*/
+
 .toggler:checked + .hamburger > div {
   /* this will rotatate and make '/' */
   transform: rotate(135deg);
@@ -65,4 +66,62 @@
   top: 0;
   /* this is rotate again 90degree will make X */
   transform: rotate(90deg);
+}
+
+/* rotate on checked when we hover over checkbox */
+
+.toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* placing the navbar in the top left corner when we clicked hamburger menu */
+
+/*  first work on .menu*/
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+/* navbar */
+ul {
+  margin-left: 40px;
+  line-height: 4rem;
+  list-style: none;
+}
+ul li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/*  when .toggler or hamburger menu(checkbox)clicked*/
+.toggler:checked ~ .menu {
+  visibility: visible;
+}
+.toggler:checked ~ .menu > div {
+  transform: scale(1);
+}
+
+/* transform effect with help of transform scale in the first div for background color and overlay effect*/
+.menu > div {
+  width: 100%;
+  height: 100%;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-opac-color);
+  transform: scale(0);
+  transition: all 0.4s ease 0.4s;
+}
+.menu > div > div {
+  width: 90%;
+  height: 100%;
 }
