@@ -36,7 +36,6 @@ body {
   justify-content: center;
   text-align: center;
   line-height: 1.8rem;
-  z-index: 1;
 }
 #showcase::after {
   position: absolute;
@@ -50,6 +49,10 @@ body {
 }
 #showcase h1 {
   font-size: 3rem;
+}
+#showcase h1 .mid-color {
+  font-size: 4rem;
+  color: var(--mid-text-color);
 }
 #showcase p {
   /* width: 30%; */

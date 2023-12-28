@@ -4,41 +4,65 @@
   left: 0;
   z-index: 1;
 }
-
-.menu-wrap .toggler {
+.toggler {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
-  cursor: pointer;
   width: 50px;
   height: 50px;
+  z-index: 2;
+  cursor: pointer;
   opacity: 0;
 }
-
-.menu-wrap .hamburger {
+.hamburger {
+  width: 60px;
+  height: 60px;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
-  background: var(--primary-color);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  transition: all 0.4s ease;
 }
-
-/* Hamburger Line */
-.menu-wrap .hamburger > div {
+/* adding hamburger menu line */
+/* this will create single line */
+.hamburger > div {
   position: relative;
-  flex: none;
+  background-color: #fff;
   width: 100%;
   height: 2px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* adding smooth effect during rotation */
   transition: all 0.4s ease;
+}
+/* this is will create top and bottom line */
+.hamburger > div::before,
+.hamburger > div::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+}
+.hamburger > div::after {
+  top: 10px;
+}
+
+/* rotating and making of X*/
+.toggler:checked + .hamburger > div {
+  /* this will rotatate and make '/' */
+  transform: rotate(135deg);
+}
+.toggler:checked + .hamburger > div:before,
+.toggler:checked + .hamburger > div:after {
+  top: 0;
+  /* this is rotate again 90degree will make X */
+  transform: rotate(90deg);
 }
